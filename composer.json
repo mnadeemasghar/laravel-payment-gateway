@@ -1,0 +1,36 @@
+{
+  "name": "mnadeemasghar/laravel-payment-gateway",
+  "description": "Simple and extensible payment gateway wrapper for Laravel",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "M Nadeem Asghar",
+      "homepage": "https://github.com/mnadeemasghar"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "illuminate/support": "^10.0|^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mnadeemasghar\\PaymentGateway\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Mnadeemasghar\\PaymentGateway\\PaymentGatewayServiceProvider"
+      ],
+      "aliases": {
+        "PaymentGateway": "Mnadeemasghar\\PaymentGateway\\Facades\\PaymentGateway"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
